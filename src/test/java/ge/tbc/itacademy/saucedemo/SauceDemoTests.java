@@ -60,4 +60,5 @@ public class SauceDemoTests extends SauceDemoSetup {
         homePageSteps.validateInputUsernameIsEmpty()
                 .validateInputPasswordIsEmpty();
     }
+    String conflict="Two";
 }
