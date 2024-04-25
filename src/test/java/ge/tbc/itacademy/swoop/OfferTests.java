@@ -5,7 +5,10 @@ import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 public class OfferTests extends SwoopSetup {
-
+    @Feature("Price Range")
+    @Severity(SeverityLevel.NORMAL)
+    @Story("validate price range functionality")
+    @Description("Click on the Recreation button, set the price range, and validate prices within the specified range")
     @Test(priority = 1, dataProviderClass = SwoopDataProvider.class, dataProvider = "minAndMaxPrice", groups = "SwoopRegression")
     public void rangeTest(Integer minPrice, Integer maxPrice){
         homePageSteps.clickRecreationButton();
@@ -42,12 +45,20 @@ public class OfferTests extends SwoopSetup {
                 .validateLoginPageAppeared();
     }
     @Test(priority = 4,groups = "SwoopRegression")
+    @Feature("Share Sushi")
+    @Severity(SeverityLevel.NORMAL)
+    @Story("go to categories hover food enter sushi page select first sushi, click to share button, validate share page opened")
+    @Description("click first sushi, click share button, and validate facebook page")
     public void myTest4(){
         homePageSteps.clickToCategoriesButton()
                 .hoverFoodsButton()
                 .clickToSushiButton();
         sushiPageSteps.validateSushiWithZeroSales();
     }
+    @Feature("Price Filter")
+    @Severity(SeverityLevel.NORMAL)
+    @Story("validate clearing filters functionality")
+    @Description("Click on the Recreation button, set the minimum price, apply location and voucher filters, delete filters, and validate default settings")
     @Test(priority = 5,groups = "SwoopRegression")
     public void clearFilterTest (){
         homePageSteps.clickRecreationButton();
