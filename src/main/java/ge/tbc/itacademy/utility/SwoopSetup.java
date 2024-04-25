@@ -45,5 +45,6 @@ public class SwoopSetup {
     public void close(){
         Selenide.closeWebDriver();
     }
-    String conflict="One";
+
+    String conflict="Two";
 }
