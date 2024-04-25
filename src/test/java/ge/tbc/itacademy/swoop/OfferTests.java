@@ -3,6 +3,7 @@ import ge.tbc.itacademy.data.SwoopDataProvider;
 import ge.tbc.itacademy.utility.SwoopSetup;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
+
 public class OfferTests extends SwoopSetup {
 
     @Test(priority = 1, dataProviderClass = SwoopDataProvider.class, dataProvider = "minAndMaxPrice", groups = "SwoopRegression")
@@ -61,4 +62,6 @@ public class OfferTests extends SwoopSetup {
                 .validateMinPriceEmpty();
     }
 
+
+    String conflict="One";
 }
