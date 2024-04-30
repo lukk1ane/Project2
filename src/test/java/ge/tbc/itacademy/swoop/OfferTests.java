@@ -74,5 +74,5 @@ public class OfferTests extends SwoopSetup {
     }
 
 
-    String conflict="Two";
+    String conflict="One";
 }
